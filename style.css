@@ -93,9 +93,15 @@ header{
 
 .main{
     height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 }
 .main-text{
     padding: 30px;
+    margin-bottom: 100px;
 }
 
 .square{
@@ -105,12 +111,114 @@ header{
     background-color: rgb(255, 255, 255);
     text-align: center;
 }
+
 .dark .square{
     background-color: rgb(71, 71, 71);
 }
 .sub-section{
     display: flex;
     flex-wrap: wrap;
+}
+.hero-image{
+  position: relative;
+  width: 50%;
+  height: 350px;
+  margin-bottom: 100px;
+}
+.cube{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  /* background-color: pink; */
+  transform: rotate(-25deg) skew(25deg);
+}
+.cube::before{
+  position: absolute;
+  content: '';
+  width: 21px;
+  height: 100%;
+  /* background-color: blue; */
+  transform: skewY(-45deg);
+  left: -20px;
+  bottom: -10px;
+}
+.cube::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 21px;
+  /* background-color: rgb(255, 0, 0); */
+  transform: skewX(-45deg);
+  left: -10px;
+  bottom: -20px;
+}
+#html{
+  left: 100px;
+  bottom: 80px;
+  background-image: url('images/html-square.png');
+  background-size: cover;
+  background-color: rgb(175,119, 227);
+  box-shadow: -60px 60px 20px rgb(50 50 50 /15%);
+}
+.dark #html{
+  box-shadow: -60px 60px 20px rgba(255, 255, 255, 0.15);
+}
+#html::before{
+  background-color: rgb(189,154, 221);
+}
+#html::after{
+  background-color: rgb(205,188, 221);
+}
+#css{
+  left: 250px;
+  bottom: 240px;
+  background-image: url('images/css-square.png');
+  background-size: cover;
+  background-color: rgb(247, 7, 155);
+  box-shadow: -60px 60px 20px rgb(50 50 50 /15%);
+}
+.dark #css{
+  box-shadow: -100px 100px 20px rgba(255, 255, 255, 0.15);
+}
+#css::before{
+  background-color: rgb(231, 22, 168);
+}
+#css::after{
+  background-color: rgb(238, 22, 191);
+}
+#javascript{
+  left: 450px;
+  bottom: 200px;
+  background-image: url('images/javascript-square.png');
+  background-size: cover;
+  background-color: rgb(7, 247, 135);
+  box-shadow: -60px 60px 20px rgb(50 50 50 /15%);
+}
+.dark #javascript{
+  box-shadow: -40px 40px 20px rgba(255, 255, 255, 0.15);
+}
+#javascript::before{
+  background-color: rgb(22, 231, 102);
+}
+#javascript::after{
+  background-color: rgb(22, 238, 148);
+}
+#react{
+  left: 350px;
+  bottom: 40px;
+  background-image: url('images/react-square.png');
+  background-size: cover;
+  background-color: rgb(7, 103, 247);
+  box-shadow: -60px 60px 20px rgb(50 50 50 /15%);
+}
+.dark #react{
+  box-shadow: -80px 80px 20px rgba(255, 255, 255, 0.15);
+}
+#react::before{
+  background-color: rgb(22, 147, 231);
+}
+#react::after{
+  background-color: rgb(22, 115, 238);
 }
 footer{
   display: flex;
@@ -147,4 +255,9 @@ footer{
         margin:1%;
         height:600px;
     }
+}
+@media(max-width:1300px){
+  .hero-image{
+    display: none;
+  }
 }
